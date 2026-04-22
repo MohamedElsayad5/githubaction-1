@@ -1,10 +1,11 @@
 name: Build and Push Docker Image  #workflow name , can be anything you want
 
 on:
-  push:  #trigger the workflow when there is a push to the main branch.listen to the push event on the main branch
-    branches: [main] #specify the branch to listen to for push events
-  pull_request:  #trigger the workflow when there is a pull request to the main branch
-    branches: [main]
+  workflow_dispatch: #trigger the workflow manually from the GitHub Actions tab in the repository
+  # push:  #trigger the workflow when there is a push to the main branch.listen to the push event on the main branch
+  #   branches: [main] #specify the branch to listen to for push events
+  # pull_request:  #trigger the workflow when there is a pull request to the main branch
+  #   branches: [main]
 
 jobs: #define the jobs that will run as part of this workflow
   build-and-push: #job name, can be anything you want 
